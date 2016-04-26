@@ -1,21 +1,62 @@
 //
 //  CollectionViewController.swift
-//  Refresh
+//  STRefreshDemo
 //
-//  Created by  lifirewolf on 16/3/3.
-//  Copyright © 2016年  lifirewolf. All rights reserved.
+//  Created by 沈兆良 on 16/4/12.
+//  Copyright © 2016年 沈兆良. All rights reserved.
 //
 
 import UIKit
 
 class CollectionViewController: UIViewController {
-    
-    let collectionViewCellIdentifier = "STCollectionCell"
-    var colors = [UIColor]()
 
     // MARK: - --- interface 接口
+    private let cellIdentifier = "STCollectionCell"
 
+    var colors = [UIColor]()
     // MARK: - --- lift cycle 生命周期 ---
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.addSubview(collectionView)
+
+        // 下拉刷新
+        collectionView.refreshHeader = RefreshNormalHeader {
+            // 增加5条假数据
+            for _ in 0..<10 {
+                self.colors.insert(UIColor.colorRandom(), atIndex: 0)
+            }
+
+            // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
+          delay(2) {
+                self.collectionView.reloadData()
+
+                // 结束刷新
+                self.collectionView.refreshHeader.endRefreshing()
+            }
+        }
+
+        collectionView.refreshHeader.beginRefreshing()
+
+        // 上拉刷新
+        collectionView.refreshFooter = RefreshAutoNormalFooter() {
+            // 增加5条假数据
+            for _ in 0..<10 {
+                self.colors.append(UIColor.colorRandom())
+            }
+
+            // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
+           delay(2) {
+                self.collectionView.reloadData()
+
+                // 结束刷新
+                self.collectionView.refreshFooter.endRefreshing()
+            }
+        }
+
+        // 默认先隐藏footer
+        collectionView.refreshFooter.hidden = true
+    }
 
     // MARK: - --- delegate 视图委托 ---
 
@@ -28,9 +69,9 @@ class CollectionViewController: UIViewController {
     // MARK: - --- getters 属性 ---
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: self.view.bounds,  collectionViewLayout: self.layout)
-
         collectionView.backgroundColor = UIColor.whiteColor()
         collectionView.dataSource = self
+        collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: self.cellIdentifier)
         return collectionView
     }()
 
@@ -44,50 +85,7 @@ class CollectionViewController: UIViewController {
     }()
 
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        view.addSubview(collectionView)
-
-        collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: collectionViewCellIdentifier)
-
-        // 下拉刷新
-        collectionView.refreshHeader = RefreshNormalHeader {
-            // 增加5条假数据
-            for _ in 0..<10 {
-                self.colors.insert(UIColor.colorRandom(), atIndex: 0)
-            }
-            
-            // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (Int64)(duration * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
-                self.collectionView.reloadData()
-                
-                // 结束刷新
-                self.collectionView.refreshHeader.endRefreshing()
-            }
-        }
-        
-        collectionView.refreshHeader.beginRefreshing()
-        
-        // 上拉刷新
-        collectionView.refreshFooter = RefreshAutoNormalFooter() {
-            // 增加5条假数据
-            for _ in 0..<10 {
-                self.colors.append(UIColor.colorRandom())
-            }
-            
-            // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (Int64)(duration * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
-                self.collectionView.reloadData()
-                
-                // 结束刷新
-                self.collectionView.refreshFooter.endRefreshing()
-            }
-        }
-        
-        // 默认先隐藏footer
-        collectionView.refreshFooter.hidden = true
-    }
 }
 
 extension CollectionViewController: UICollectionViewDataSource {
@@ -100,8 +98,7 @@ extension CollectionViewController: UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-
-        let cell = STCollectionCell.cellWithCollectionView(collectionView, indexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath)
         cell.backgroundColor = colors[indexPath.row]
 
         return cell

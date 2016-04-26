@@ -1,9 +1,9 @@
 //
 //  WebViewController.swift
-//  Refresh
+//  STRefreshDemo
 //
-//  Created by  lifirewolf on 16/3/3.
-//  Copyright © 2016年  lifirewolf. All rights reserved.
+//  Created by 沈兆良 on 16/4/12.
+//  Copyright © 2016年 沈兆良. All rights reserved.
 //
 
 import UIKit
@@ -33,7 +33,6 @@ class WebViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.addSubview(webView)
 
         // 加载页面

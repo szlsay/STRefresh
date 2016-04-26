@@ -37,23 +37,4 @@ public struct GCDST {
     static func backgroundQueue() -> dispatch_queue_t {
         return dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)
     }
-
 }
-
-//dispatch_sync(dispatch_get_global_queue(
-//    Int(QOS_CLASS_USER_INTERACTIVE.rawValue), 0)) {
-//
-//        NSLog("First Log")
-//
-//}
-//
-//NSLog("Second Log")
-//
-//dispatch_async(dispatch_get_global_queue(
-//    Int(QOS_CLASS_USER_INTERACTIVE.rawValue), 0)) {
-//
-//        NSLog("01 Log")
-//
-//}
-//
-//NSLog("02 Log")

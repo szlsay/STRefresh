@@ -169,16 +169,6 @@ class STRefreshComponent: UIView {
             if let refreshingBlock = self.refreshingBlock {
                 refreshingBlock()
             }
-            //
-            //            if let refreshingTarget = self.refreshingTarget {
-            //                if refreshingTarget.respondsToSelector(self.refreshingAction) {
-            //                    // TODO: dispath message
-            //                }
-            //            }
-            //
-            //            if ([self.refreshingTarget respondsToSelector:self.refreshingAction]) {
-            //                MJRefreshMsgSend(MJRefreshMsgTarget(self.refreshingTarget), self.refreshingAction, self);
-            //            }
         }
     }
 

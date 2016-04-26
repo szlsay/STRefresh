@@ -111,6 +111,7 @@ public extension UIView {
         }
     }
 
+    /// 11.尺寸
     public var size : CGSize {
         get {
             return self.frame.size

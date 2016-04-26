@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6756C5B91CCF50D200BA0AA5 /* NSObject+ST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6756C5B81CCF50D200BA0AA5 /* NSObject+ST.swift */; };
 		6787C90D1CCF45ED007C5D6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6787C90C1CCF45ED007C5D6F /* Assets.xcassets */; };
 		6787C9101CCF45ED007C5D6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6787C90E1CCF45ED007C5D6F /* LaunchScreen.storyboard */; };
 		6787C9341CCF465A007C5D6F /* RefreshAutoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6787C9191CCF465A007C5D6F /* RefreshAutoFooter.swift */; };
@@ -14,10 +15,7 @@
 		6787C9361CCF465A007C5D6F /* RefreshComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6787C91B1CCF465A007C5D6F /* RefreshComponent.swift */; };
 		6787C9371CCF465A007C5D6F /* RefreshFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6787C91C1CCF465A007C5D6F /* RefreshFooter.swift */; };
 		6787C9381CCF465A007C5D6F /* RefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6787C91D1CCF465A007C5D6F /* RefreshHeader.swift */; };
-		6787C93C1CCF465A007C5D6F /* RefreshConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6787C9221CCF465A007C5D6F /* RefreshConst.swift */; };
-		6787C93D1CCF465A007C5D6F /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6787C9231CCF465A007C5D6F /* UIScrollView+Extension.swift */; };
 		6787C93E1CCF465A007C5D6F /* UIScrollView+Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6787C9241CCF465A007C5D6F /* UIScrollView+Refresh.swift */; };
-		6787C93F1CCF465A007C5D6F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6787C9251CCF465A007C5D6F /* UIView+Extension.swift */; };
 		6787C9401CCF465A007C5D6F /* RefreshAutoGifFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6787C9281CCF465A007C5D6F /* RefreshAutoGifFooter.swift */; };
 		6787C9411CCF465A007C5D6F /* RefreshAutoNormalFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6787C9291CCF465A007C5D6F /* RefreshAutoNormalFooter.swift */; };
 		6787C9421CCF465A007C5D6F /* RefreshAutoStateFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6787C92A1CCF465A007C5D6F /* RefreshAutoStateFooter.swift */; };
@@ -35,7 +33,6 @@
 		6787C9581CCF46AF007C5D6F /* DIYHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6787C9521CCF46AF007C5D6F /* DIYHeader.swift */; };
 		6787C9661CCF46D5007C5D6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6787C9591CCF46D5007C5D6F /* AppDelegate.swift */; };
 		6787C9671CCF46D5007C5D6F /* STTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6787C95A1CCF46D5007C5D6F /* STTableCell.swift */; };
-		6787C9681CCF46D5007C5D6F /* STCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6787C95B1CCF46D5007C5D6F /* STCollectionCell.swift */; };
 		6787C9691CCF46D5007C5D6F /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6787C95C1CCF46D5007C5D6F /* CollectionViewController.swift */; };
 		6787C96A1CCF46D5007C5D6F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6787C95D1CCF46D5007C5D6F /* TableViewController.swift */; };
 		6787C96B1CCF46D5007C5D6F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6787C95E1CCF46D5007C5D6F /* WebViewController.swift */; };
@@ -49,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6756C5B81CCF50D200BA0AA5 /* NSObject+ST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+ST.swift"; sourceTree = "<group>"; };
 		6787C8FF1CCF45EC007C5D6F /* STRefreshDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STRefreshDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6787C90C1CCF45ED007C5D6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6787C90F1CCF45ED007C5D6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,10 +56,7 @@
 		6787C91B1CCF465A007C5D6F /* RefreshComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshComponent.swift; sourceTree = "<group>"; };
 		6787C91C1CCF465A007C5D6F /* RefreshFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshFooter.swift; sourceTree = "<group>"; };
 		6787C91D1CCF465A007C5D6F /* RefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshHeader.swift; sourceTree = "<group>"; };
-		6787C9221CCF465A007C5D6F /* RefreshConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshConst.swift; sourceTree = "<group>"; };
-		6787C9231CCF465A007C5D6F /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 		6787C9241CCF465A007C5D6F /* UIScrollView+Refresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Refresh.swift"; sourceTree = "<group>"; };
-		6787C9251CCF465A007C5D6F /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		6787C9281CCF465A007C5D6F /* RefreshAutoGifFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshAutoGifFooter.swift; sourceTree = "<group>"; };
 		6787C9291CCF465A007C5D6F /* RefreshAutoNormalFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshAutoNormalFooter.swift; sourceTree = "<group>"; };
 		6787C92A1CCF465A007C5D6F /* RefreshAutoStateFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshAutoStateFooter.swift; sourceTree = "<group>"; };
@@ -79,17 +74,16 @@
 		6787C9521CCF46AF007C5D6F /* DIYHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIYHeader.swift; sourceTree = "<group>"; };
 		6787C9591CCF46D5007C5D6F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6787C95A1CCF46D5007C5D6F /* STTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STTableCell.swift; sourceTree = "<group>"; };
-		6787C95B1CCF46D5007C5D6F /* STCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCollectionCell.swift; sourceTree = "<group>"; };
 		6787C95C1CCF46D5007C5D6F /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		6787C95D1CCF46D5007C5D6F /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		6787C95E1CCF46D5007C5D6F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		6787C95F1CCF46D5007C5D6F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6787C9601CCF46D5007C5D6F /* UIView+ST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ST.swift"; sourceTree = "<group>"; };
-		6787C9611CCF46D5007C5D6F /* UIScrollView+ST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ST.swift"; sourceTree = "<group>"; };
-		6787C9621CCF46D5007C5D6F /* UIColor+ST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ST.swift"; sourceTree = "<group>"; };
-		6787C9631CCF46D5007C5D6F /* GCD+ST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GCD+ST.swift"; sourceTree = "<group>"; };
-		6787C9641CCF46D5007C5D6F /* STRefreshComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STRefreshComponent.swift; sourceTree = "<group>"; };
-		6787C9651CCF46D5007C5D6F /* STRefreshConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STRefreshConst.swift; sourceTree = "<group>"; };
+		6787C9601CCF46D5007C5D6F /* UIView+ST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+ST.swift"; path = "../UIView+ST.swift"; sourceTree = "<group>"; };
+		6787C9611CCF46D5007C5D6F /* UIScrollView+ST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIScrollView+ST.swift"; path = "../UIScrollView+ST.swift"; sourceTree = "<group>"; };
+		6787C9621CCF46D5007C5D6F /* UIColor+ST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+ST.swift"; path = "../UIColor+ST.swift"; sourceTree = "<group>"; };
+		6787C9631CCF46D5007C5D6F /* GCD+ST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "GCD+ST.swift"; path = "../GCD+ST.swift"; sourceTree = "<group>"; };
+		6787C9641CCF46D5007C5D6F /* STRefreshComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STRefreshComponent.swift; path = ../../STRefreshComponent.swift; sourceTree = "<group>"; };
+		6787C9651CCF46D5007C5D6F /* STRefreshConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STRefreshConst.swift; path = ../../STRefreshConst.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +97,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6756C5B71CCF4FB700BA0AA5 /* Extension(类别) */ = {
+			isa = PBXGroup;
+			children = (
+				6787C9601CCF46D5007C5D6F /* UIView+ST.swift */,
+				6787C9621CCF46D5007C5D6F /* UIColor+ST.swift */,
+				6787C9631CCF46D5007C5D6F /* GCD+ST.swift */,
+				6787C9611CCF46D5007C5D6F /* UIScrollView+ST.swift */,
+				6756C5B81CCF50D200BA0AA5 /* NSObject+ST.swift */,
+			);
+			path = "Extension(类别)";
+			sourceTree = "<group>";
+		};
 		6787C8F61CCF45EC007C5D6F = {
 			isa = PBXGroup;
 			children = (
@@ -122,19 +128,13 @@
 		6787C9011CCF45EC007C5D6F /* STRefreshDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6756C5B71CCF4FB700BA0AA5 /* Extension(类别) */,
 				6787C9591CCF46D5007C5D6F /* AppDelegate.swift */,
 				6787C95A1CCF46D5007C5D6F /* STTableCell.swift */,
-				6787C95B1CCF46D5007C5D6F /* STCollectionCell.swift */,
 				6787C95C1CCF46D5007C5D6F /* CollectionViewController.swift */,
 				6787C95D1CCF46D5007C5D6F /* TableViewController.swift */,
 				6787C95E1CCF46D5007C5D6F /* WebViewController.swift */,
 				6787C95F1CCF46D5007C5D6F /* ViewController.swift */,
-				6787C9601CCF46D5007C5D6F /* UIView+ST.swift */,
-				6787C9611CCF46D5007C5D6F /* UIScrollView+ST.swift */,
-				6787C9621CCF46D5007C5D6F /* UIColor+ST.swift */,
-				6787C9631CCF46D5007C5D6F /* GCD+ST.swift */,
-				6787C9641CCF46D5007C5D6F /* STRefreshComponent.swift */,
-				6787C9651CCF46D5007C5D6F /* STRefreshConst.swift */,
 				6787C9171CCF465A007C5D6F /* STRefresh */,
 				6787C90C1CCF45ED007C5D6F /* Assets.xcassets */,
 				6787C90E1CCF45ED007C5D6F /* LaunchScreen.storyboard */,
@@ -169,10 +169,9 @@
 		6787C9211CCF465A007C5D6F /* Const */ = {
 			isa = PBXGroup;
 			children = (
-				6787C9221CCF465A007C5D6F /* RefreshConst.swift */,
-				6787C9231CCF465A007C5D6F /* UIScrollView+Extension.swift */,
+				6787C9641CCF46D5007C5D6F /* STRefreshComponent.swift */,
+				6787C9651CCF46D5007C5D6F /* STRefreshConst.swift */,
 				6787C9241CCF465A007C5D6F /* UIScrollView+Refresh.swift */,
-				6787C9251CCF465A007C5D6F /* UIView+Extension.swift */,
 			);
 			path = Const;
 			sourceTree = "<group>";
@@ -289,9 +288,9 @@
 				6787C9371CCF465A007C5D6F /* RefreshFooter.swift in Sources */,
 				6787C96E1CCF46D5007C5D6F /* UIScrollView+ST.swift in Sources */,
 				6787C9481CCF465A007C5D6F /* RefreshStateHeader.swift in Sources */,
-				6787C9681CCF46D5007C5D6F /* STCollectionCell.swift in Sources */,
 				6787C9691CCF46D5007C5D6F /* CollectionViewController.swift in Sources */,
 				6787C9541CCF46AF007C5D6F /* ChiBaoZiFooter2.swift in Sources */,
+				6756C5B91CCF50D200BA0AA5 /* NSObject+ST.swift in Sources */,
 				6787C9401CCF465A007C5D6F /* RefreshAutoGifFooter.swift in Sources */,
 				6787C9711CCF46D5007C5D6F /* STRefreshComponent.swift in Sources */,
 				6787C96F1CCF46D5007C5D6F /* UIColor+ST.swift in Sources */,
@@ -301,7 +300,6 @@
 				6787C96C1CCF46D5007C5D6F /* ViewController.swift in Sources */,
 				6787C96A1CCF46D5007C5D6F /* TableViewController.swift in Sources */,
 				6787C9461CCF465A007C5D6F /* RefreshGifHeader.swift in Sources */,
-				6787C93F1CCF465A007C5D6F /* UIView+Extension.swift in Sources */,
 				6787C9451CCF465A007C5D6F /* RefreshBackStateFooter.swift in Sources */,
 				6787C96B1CCF46D5007C5D6F /* WebViewController.swift in Sources */,
 				6787C9411CCF465A007C5D6F /* RefreshAutoNormalFooter.swift in Sources */,
@@ -319,9 +317,7 @@
 				6787C9571CCF46AF007C5D6F /* DIYBackFooter.swift in Sources */,
 				6787C9381CCF465A007C5D6F /* RefreshHeader.swift in Sources */,
 				6787C9721CCF46D5007C5D6F /* STRefreshConst.swift in Sources */,
-				6787C93C1CCF465A007C5D6F /* RefreshConst.swift in Sources */,
 				6787C9351CCF465A007C5D6F /* RefreshBackFooter.swift in Sources */,
-				6787C93D1CCF465A007C5D6F /* UIScrollView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

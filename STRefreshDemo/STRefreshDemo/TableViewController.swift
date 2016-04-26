@@ -1,24 +1,26 @@
 //
 //  TableViewController.swift
-//  Refresh
+//  STRefreshDemo
 //
-//  Created by  lifirewolf on 16/3/3.
-//  Copyright © 2016年  lifirewolf. All rights reserved.
+//  Created by 沈兆良 on 16/4/12.
+//  Copyright © 2016年 沈兆良. All rights reserved.
 //
 
 import UIKit
 
-let duration = 2.0
+//let duration = 2.0
 
 class TableViewController: UIViewController {
 
     // MARK: - --- interface 接口
+    var data = [String]()
 
     // MARK: - --- lift cycle 生命周期 ---
     override func viewDidLoad() {
         super.viewDidLoad()
+
         view.addSubview(tableView)
-        example02()
+        example05()
     }
     // MARK: - --- delegate 视图委托 ---
 
@@ -30,15 +32,12 @@ class TableViewController: UIViewController {
 
     // MARK: - --- getters 属性 ---
     private lazy var tableView : UITableView = {
-        let tableView = UITableView(frame: self.view.bounds, style: UITableViewStyle.Grouped)
+        let tableView = UITableView(frame: self.view.bounds, style: .Plain)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableFooterView = UIView()
         return tableView
     }()
-
-
-
-    var data = [String]()
 
 
     func example01() {
@@ -191,8 +190,6 @@ class TableViewController: UIViewController {
     }
     
     func reset() {
-        //    [self.tableView.mj_footer setRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
-        //    [self.tableView.mj_footer beginRefreshing];
         tableView.refreshFooter.resetNoMoreData()
     }
     
@@ -309,14 +306,13 @@ class TableViewController: UIViewController {
         for _ in 0..<5 {
             data.insert(randomData(), atIndex: 0)
         }
-        
-        // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (Int64)(duration * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
+
+        delay(2) { 
             // 刷新表格
             self.tableView.reloadData()
-            
             // 拿到当前的下拉刷新控件，结束刷新状态
             self.tableView.refreshHeader.endRefreshing()
+
         }
     }
     
@@ -328,7 +324,7 @@ class TableViewController: UIViewController {
         }
         
         // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (Int64)(duration * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
+        delay(2) {
             // 刷新表格
             self.tableView.reloadData()
             
@@ -344,7 +340,7 @@ class TableViewController: UIViewController {
         }
         
         // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (Int64)(duration * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
+        delay(2) {
             // 刷新表格
             self.tableView.reloadData()
             
@@ -359,12 +355,11 @@ class TableViewController: UIViewController {
         for _ in 0..<5 {
             data.append(randomData())
         }
-        
-        // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (Int64)(duration * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
+
+
+        delay(2) { 
             // 刷新表格
             self.tableView.reloadData()
-            
             // 隐藏当前的上拉刷新控件
             self.tableView.refreshFooter.hidden = true
         }

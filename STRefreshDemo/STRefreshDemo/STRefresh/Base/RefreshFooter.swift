@@ -11,11 +11,6 @@ import UIKit
 class RefreshFooter: STRefreshComponent {
 
     /** 创建footer */
-//    static func footerWithRefreshingBlock(refreshingBlock: RefreshComponentRefreshingBlock) -> RefreshFooter {
-//        let cmp = RefreshFooter()
-//        cmp.refreshingBlock = refreshingBlock;
-//        return cmp
-//    }
     init(refreshingBlock: RefreshComponentRefreshingBlock) {
         super.init(frame: CGRectZero)
         self.refreshingBlock = refreshingBlock
@@ -25,12 +20,6 @@ class RefreshFooter: STRefreshComponent {
         super.init(coder: aDecoder)
     }
     
-//    static func footerWithRefreshingTarget(target: AnyObject, refreshingAction action: Selector) -> RefreshFooter {
-//        let cmp = RefreshFooter()
-//        cmp.setRefreshingTarget(target, refreshingAction: action)
-//        return cmp
-//    }
-    
     /** 提示没有更多的数据 */
     func endRefreshingWithNoMoreData() {
         state = .NoMoreData
@@ -39,8 +28,6 @@ class RefreshFooter: STRefreshComponent {
     func noticeNoMoreData() {
         endRefreshingWithNoMoreData()
     }
-    
-//    - (void)noticeNoMoreData MJRefreshDeprecated("使用endRefreshingWithNoMoreData");
     
     /** 重置没有更多的数据（消除没有更多数据的状态） */
     func resetNoMoreData() {

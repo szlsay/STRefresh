@@ -23,7 +23,7 @@ let RefreshKeyPathContentInset = "contentInset"
 let RefreshKeyPathContentSize = "contentSize"
 let RefreshKeyPathPanState = "state"
 
-let RefreshHeaderLastUpdatedTimeKey = "MJRefreshHeaderLastUpdatedTimeKey"
+let RefreshHeaderLastUpdatedTimeKey = "STRefreshHeaderLastUpdatedTimeKey"
 
 let RefreshHeaderIdleText = "下拉可以刷新"
 let RefreshHeaderPullingText = "松开立即刷新"
